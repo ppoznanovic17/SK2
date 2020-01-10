@@ -1,0 +1,29 @@
+
+<div class="container">
+
+  <table class="table" >
+    <thead>
+    <tr>
+
+      <th>city</th>
+      <th>country</th>
+      <th>type</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of subs">
+      <td>{{s.city}}</td>
+      <td>{{s.country}}</td>
+      <td>{{s.type}}</td>
+      <td><button (click)="subscribe(s)" class="btn btn-success" *ngIf="!s.isSub"> subscribe</button></td>
+      <td><button (click)="unsubscribe(s)" class="btn btn-warning" *ngIf="s.isSub"> unsubscribe</button></td>
+
+
+
+
+    </tr>
+    </tbody>
+  </table>
+  <button  class="btn success"> Save</button>
+</div>

@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png" width="30" height="30" class="d-inline-block align-top" alt="cao">
+      SK2
+    </a>
+    <ul class="navbar-nav container">
+      <li><a routerLink="/home" class="nav-link" *ngIf="authService.isUserLoggedIn()">Home</a></li>
+      <li><a routerLink="/options" class="nav-link" *ngIf="authService.isUserLoggedIn()">Options</a></li>
+    </ul>
+
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li><a routerLink="/" class="nav-link" *ngIf="!authService.isUserLoggedIn()">LogIn</a></li>
+      <li><a routerLink="/logout" class="nav-link" *ngIf="authService.isUserLoggedIn()">LogOut</a></li>
+    </ul>
+  </nav>
+
+
+
+
+</header>
